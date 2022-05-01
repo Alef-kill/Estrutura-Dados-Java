@@ -41,6 +41,8 @@ public class Main {
         graph.addEdges(0, graph.nodesList.get(2), graph.nodesList.get(5));
         graph.addEdges(0, graph.nodesList.get(2), graph.nodesList.get(6));
         
+        
+        graph.print();
     }
 }
 

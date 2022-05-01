@@ -51,6 +51,12 @@ public class Graph<T> {
         }
         return node;
     }
+    
+    public void print() {
+        for(var a : EdgesList){
+            System.out.println(a.getHome().getElement()+"  =>  "+a.getEnd().getElement());
+        }
+    }
 
 }
 
