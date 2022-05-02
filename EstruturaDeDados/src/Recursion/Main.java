@@ -23,9 +23,8 @@ public class Main {
         System.out.println("\n");
         
         System.out.println("Digite um número: ");
-        int num = new Scanner(System.in).nextInt();
-        int soma = recursiveSum(num);
-        System.out.println("A soma dos algarismos é: " + soma);
+        int mult = recursiveMultiplication(3, 2);
+        System.out.println("A soma dos algarismos é: " + mult);
         
         System.exit(0);
         
@@ -59,12 +58,14 @@ public class Main {
         }
     }
     
-    public static int recursiveSum(int num){
-        // Se a variavel num for igual a 10, significa
-        // Que nós já somamos todos os algarismos
-        if(num<10)
-            return num;
-        else
-            return recursiveSum(num/10)+num%10;
+    public static int recursiveMultiplication(int a, int b){
+        // Se a variavel b igual a 1 então eu retorno pois essa é meu ponto base;
+        // 3 x 2 
+        // 3 x 1  1 é a base
+         if( b == 1)
+            return a;
+         
+         // é somado o ultilmo valor com o retorno atual
+         return a + recursiveMultiplication(a, --b); 
     }
 }
